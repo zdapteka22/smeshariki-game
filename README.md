@@ -1,25 +1,18 @@
 # Смешарики — Битва и Догонялки
 
-Браузерная мини-игра + сайт.
+## Играть (если catbox/github.io не открываются — пробуй все по очереди)
 
-## Играть онлайн
+### Локально (всегда работает)
+Открой на рабочем столе файл `Смешарики_ИГРА.html`
 
-**Сайт:** https://files.catbox.moe/anz1ts.html
+Или: http://127.0.0.1:8765/game.html (если запущен сервер)
 
-**Игра:** https://files.catbox.moe/miswsi.html
-
-**GitHub Pages:** https://zdapteka22.github.io/smeshariki-game/
+### Онлайн
+- Игра (catbox): https://files.catbox.moe/j9nwbj.html
+- Игра (litterbox 72ч): https://litter.catbox.moe/kv0s4i.html
+- Сайт: https://files.catbox.moe/je2eug.html
+- Gofile: https://gofile.io/d/WNYeNx
+- GitHub Pages: https://zdapteka22.github.io/smeshariki-game/
 
 ## Управление
-
-| Клавиша | Действие |
-|--------|----------|
-| 1 / 2 / 3 | Битва / Догонялки / Голя |
-| WASD | Ходьба |
-| Пробел | Удар |
-| Shift | Бег |
-| M | Музыка |
-| Q | Выйти |
-| Esc | Пауза |
-
-Фанатский проект. Персонажи — IP Riki Group.
+1/2/3 режимы, WASD, Пробел, Shift, M, Q, Esc
