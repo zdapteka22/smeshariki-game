@@ -1,0 +1,51 @@
+name: Import game assets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download asset chunks from catbox
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          declare -A URLS=(
+            [0]=https://files.catbox.moe/fliypv.js
+            [1]=https://files.catbox.moe/x2ujo8.js
+            [2]=https://files.catbox.moe/2zv9w1.js
+            [3]=https://files.catbox.moe/642hyf.js
+            [4]=https://files.catbox.moe/aoi9ni.js
+            [5]=https://files.catbox.moe/wnmvhr.js
+            [6]=https://files.catbox.moe/gkh1qs.js
+            [7]=https://files.catbox.moe/8o6lec.js
+            [8]=https://files.catbox.moe/kcvph4.js
+          )
+          for i in 0 1 2 3 4 5 6 7 8; do
+            echo "Downloading p${i}.js ..."
+            curl -fsSL --retry 5 --retry-delay 2 -o "assets/p${i}.js" "${URLS[$i]}"
+            wc -c "assets/p${i}.js"
+            # basic sanity: must assign __SM_PARTS[i]
+            grep -q "__SM_PARTS\[${i}\]" "assets/p${i}.js"
+          done
+          # ensure empty .nojekyll exists for Pages
+          touch .nojekyll
+
+      - name: Commit assets to main
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/p0.js assets/p1.js assets/p2.js assets/p3.js assets/p4.js assets/p5.js assets/p6.js assets/p7.js assets/p8.js .nojekyll
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Add self-contained game asset chunks assets/p0.js..p8.js"
+          git push origin HEAD:main
