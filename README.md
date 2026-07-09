@@ -1,44 +1,25 @@
 # Смешарики — Битва и Догонялки
 
-Браузерная мини-игра (HTML5 canvas).
+Браузерная мини-игра + сайт.
 
-## Играть онлайн прямо сейчас
+## Играть онлайн
 
-**https://files.catbox.moe/q7xuxp.html**
+**Сайт:** https://files.catbox.moe/anz1ts.html
 
-Архив для Яндекс.Игр: **https://files.catbox.moe/amje01.zip**
+**Игра:** https://files.catbox.moe/miswsi.html
 
-Репозиторий: https://github.com/zdapteka22/smeshariki-game
+**GitHub Pages:** https://zdapteka22.github.io/smeshariki-game/
 
 ## Управление
 
 | Клавиша | Действие |
 |--------|----------|
-| 1 | Режим Битва |
-| 2 | Догонялки |
-| 3 | Голя |
+| 1 / 2 / 3 | Битва / Догонялки / Голя |
 | WASD | Ходьба |
-| Пробел | Удар / кусь |
+| Пробел | Удар |
 | Shift | Бег |
 | M | Музыка |
 | Q | Выйти |
 | Esc | Пауза |
 
-## Яндекс.Игры (модерация)
-
-1. Открой https://games.yandex.ru/console (войди в Яндекс)
-2. «Добавить игру»
-3. Загрузи zip: `Desktop\SmesharikiGame_yandex.zip` или ссылка выше
-4. Заполни название, описание, иконку 512×512, возрастной рейтинг
-5. Отправь на модерацию (обычно 1–3 рабочих дня)
-
-Локально zip уже собран: `C:\\Users\\Евгений\\Desktop\\SmesharikiGame_yandex.zip`
-
-## GitHub Pages
-
-Settings → Pages → Deploy from branch → `main` / root → Save  
-Потом: `https://zdapteka22.github.io/smeshariki-game/`
-
-## Важно
-
-Персонажи «Смешарики» — IP Riki Group. Каталог Яндекса может отклонить игру без лицензии/своих персонажей.
+Фанатский проект. Персонажи — IP Riki Group.
