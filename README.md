@@ -2,35 +2,43 @@
 
 Браузерная мини-игра (HTML5 canvas).
 
-## Играть онлайн
+## Играть онлайн прямо сейчас
 
-- **Онлайн (HTML):** https://files.catbox.moe/gcp3p1.html
-- **Архив для Яндекс.Игр:** https://files.catbox.moe/amje01.zip
+**https://files.catbox.moe/q7xuxp.html**
 
-## GitHub Pages
+Архив для Яндекс.Игр: **https://files.catbox.moe/amje01.zip**
 
-1. Открой: Settings → Pages
-2. Source: Deploy from a branch
-3. Branch: `main` / folder `/ (root)`
-4. Save → через 1–2 минуты игра будет на:
-   `https://zdapteka22.github.io/smeshariki-game/`
+Репозиторий: https://github.com/zdapteka22/smeshariki-game
 
 ## Управление
 
-- `1` — Битва
-- `2` — Догонялки
-- `3` — Голя
-- выбор персонажа → игра
-- `M` — музыка
-- `Q` — выход
+| Клавиша | Действие |
+|--------|----------|
+| 1 | Режим Битва |
+| 2 | Догонялки |
+| 3 | Голя |
+| WASD | Ходьба |
+| Пробел | Удар / кусь |
+| Shift | Бег |
+| M | Музыка |
+| Q | Выйти |
+| Esc | Пауза |
 
-## Яндекс.Игры
+## Яндекс.Игры (модерация)
 
-Архив `SmesharikiGame_yandex.zip` (на рабочем столе или по ссылке выше):
-1. https://games.yandex.ru/console
-2. Добавить игру → загрузить zip (index.html в корне)
-3. Заполнить карточку → отправить на модерацию
+1. Открой https://games.yandex.ru/console (войди в Яндекс)
+2. «Добавить игру»
+3. Загрузи zip: `Desktop\SmesharikiGame_yandex.zip` или ссылка выше
+4. Заполни название, описание, иконку 512×512, возрастной рейтинг
+5. Отправь на модерацию (обычно 1–3 рабочих дня)
 
-## Важно про права
+Локально zip уже собран: `C:\\Users\\Евгений\\Desktop\\SmesharikiGame_yandex.zip`
 
-Персонажи «Смешарики» — IP Riki Group. Для публичного каталога лучше свои персонажи или официальное разрешение.
+## GitHub Pages
+
+Settings → Pages → Deploy from branch → `main` / root → Save  
+Потом: `https://zdapteka22.github.io/smeshariki-game/`
+
+## Важно
+
+Персонажи «Смешарики» — IP Riki Group. Каталог Яндекса может отклонить игру без лицензии/своих персонажей.
