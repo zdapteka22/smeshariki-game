@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download asset chunks from catbox
         run: |
@@ -31,13 +34,11 @@ jobs:
             echo "Downloading p${i}.js ..."
             curl -fsSL --retry 5 --retry-delay 2 -o "assets/p${i}.js" "${URLS[$i]}"
             wc -c "assets/p${i}.js"
-            # basic sanity: must assign __SM_PARTS[i]
             grep -q "__SM_PARTS\[${i}\]" "assets/p${i}.js"
           done
-          # ensure empty .nojekyll exists for Pages
           touch .nojekyll
 
-      - name: Commit assets to main
+      - name: Commit and push assets to main
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -48,4 +49,15 @@ jobs:
             exit 0
           fi
           git commit -m "Add self-contained game asset chunks assets/p0.js..p8.js"
-          git push origin HEAD:main
+          # rebase onto latest main then push with retries
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main || true
+            if git push origin HEAD:main; then
+              echo "Push succeeded on attempt ${attempt}"
+              exit 0
+            fi
+            echo "Push rejected, retry ${attempt}..."
+            sleep 2
+          done
+          echo "Failed to push after retries"
+          exit 1
