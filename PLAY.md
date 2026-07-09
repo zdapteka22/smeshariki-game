@@ -1,6 +1,11 @@
 # Играть
 
-- Сайт → игра: https://cdn.jsdelivr.net/gh/zdapteka22/smeshariki-game@main/index.html
-- Игра: https://cdn.jsdelivr.net/gh/zdapteka22/smeshariki-game@main/game.html
-- GitHub Pages: https://zdapteka22.github.io/smeshariki-game/
-- Запас: https://litter.catbox.moe/5p6bzx.html
+## Отдельное меню (описание режимов + персонажи)
+- https://litter.catbox.moe/0nybb2.html
+- https://files.catbox.moe/5eicll.html
+
+## Игра
+- https://cdn.jsdelivr.net/gh/zdapteka22/smeshariki-game@main/game.html
+
+## Сайт
+- https://litter.catbox.moe/zgsxs0.html
